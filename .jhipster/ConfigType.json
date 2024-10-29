@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "changelogDate": "20241009041003"
+  },
+  "applications": ["quanfig"],
+  "fields": [
+    {
+      "fieldName": "conType",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "ConfigType",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "appConfig",
+      "otherEntityRelationshipName": "configType",
+      "relationshipName": "conType",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

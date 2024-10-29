@@ -1,0 +1,66 @@
+{
+  "annotations": {
+    "changelogDate": "20241009041103"
+  },
+  "applications": ["quanfig"],
+  "fields": [
+    {
+      "fieldName": "configKey",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "configValue",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "subType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subType1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subType2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "encrypted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "enabled",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "AppConfig",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "conType",
+      "otherEntityName": "configType",
+      "otherEntityRelationshipName": "conType",
+      "relationshipName": "configType",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

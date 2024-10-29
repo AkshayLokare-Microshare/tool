@@ -1,0 +1,274 @@
+{
+  "gateways": [
+    {
+      "id": 1,
+      "deveui": "7076FF0055",
+      "fleet": "FleetA",
+      "locs": "New York",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 2,
+      "deveui": "9A8B7C6D5E",
+      "fleet": "FleetA",
+      "locs": "Philadelphia",
+      "connection_status": false,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 3,
+      "deveui": "0A1B2C3D4E",
+      "fleet": "FleetD",
+      "locs": "San Antonio",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 4,
+      "deveui": "B2C3D4E5F6",
+      "fleet": "FleetD",
+      "locs": "Austin",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 5,
+      "deveui": "D4E5F6A1B2",
+      "fleet": "FleetA",
+      "locs": "San Francisco",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 6,
+      "deveui": "F7G8H9I0J1",
+      "fleet": "FleetB",
+      "locs": "Chicago",
+      "connection_status": false,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 7,
+      "deveui": "K2L3M4N5O6",
+      "fleet": "FleetB",
+      "locs": "Los Angeles",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 8,
+      "deveui": "P7Q8R9S0T1",
+      "fleet": "FleetC",
+      "locs": "Miami",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 9,
+      "deveui": "U1V2W3X4Y5",
+      "fleet": "FleetC",
+      "locs": "Dallas",
+      "connection_status": false,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 10,
+      "deveui": "Z6A7B8C9D0",
+      "fleet": "FleetD",
+      "locs": "Seattle",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 11,
+      "deveui": "E3F4G5H6I7",
+      "fleet": "FleetE",
+      "locs": "Boston",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 12,
+      "deveui": "J8K9L0M1N2",
+      "fleet": "FleetE",
+      "locs": "Atlanta",
+      "connection_status": false,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 13,
+      "deveui": "O3P4Q5R6S7",
+      "fleet": "FleetA",
+      "locs": "Phoenix",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 14,
+      "deveui": "T8U9V0W1X2",
+      "fleet": "FleetF",
+      "locs": "Denver",
+      "connection_status": false,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 15,
+      "deveui": "Y3Z4A5B6C7",
+      "fleet": "FleetF",
+      "locs": "Las Vegas",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 16,
+      "deveui": "X5W6V7U8T9",
+      "fleet": "FleetG",
+      "locs": "Portland",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 17,
+      "deveui": "S3D2F1G4H5",
+      "fleet": "FleetG",
+      "locs": "Sacramento",
+      "connection_status": false,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 18,
+      "deveui": "H6G7F8J9K0",
+      "fleet": "FleetH",
+      "locs": "Tampa",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 19,
+      "deveui": "K4J5H6G7L8",
+      "fleet": "FleetH",
+      "locs": "Orlando",
+      "connection_status": false,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 20,
+      "deveui": "L9M8N7B6V5",
+      "fleet": "FleetI",
+      "locs": "Detroit",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 21,
+      "deveui": "Q1W2E3R4T5",
+      "fleet": "FleetJ",
+      "locs": "Salt Lake City",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 22,
+      "deveui": "M4N3B2V1C6",
+      "fleet": "FleetK",
+      "locs": "Charlotte",
+      "connection_status": false,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 23,
+      "deveui": "F6D5S4A3Z2",
+      "fleet": "FleetL",
+      "locs": "Columbus",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 24,
+      "deveui": "W9X8Y7U6V5",
+      "fleet": "FleetM",
+      "locs": "Omaha",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 25,
+      "deveui": "N8M9L7K6J5",
+      "fleet": "FleetN",
+      "locs": "Milwaukee",
+      "connection_status": false,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 26,
+      "deveui": "P4O3I2U1Y9",
+      "fleet": "FleetO",
+      "locs": "Indianapolis",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 27,
+      "deveui": "R1T2Y3U4E5",
+      "fleet": "FleetP",
+      "locs": "Kansas City",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    },
+    {
+      "id": 28,
+      "deveui": "J3K4L5M6N7",
+      "fleet": "FleetQ",
+      "locs": "Nashville",
+      "connection_status": false,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 29,
+      "deveui": "T5Y4U3I2O1",
+      "fleet": "FleetR",
+      "locs": "San Diego",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": "alokare2911@gmail.com"
+    },
+    {
+      "id": 30,
+      "deveui": "B1N2M3V4C5",
+      "fleet": "FleetS",
+      "locs": "Houston",
+      "connection_status": true,
+      "email1": "alokare@microshare.io",
+      "email2": null
+    }
+  ]
+}

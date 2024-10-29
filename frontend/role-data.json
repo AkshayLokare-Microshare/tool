@@ -1,0 +1,64 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "name": "Mickey Mouse",
+      "email": "mickey.mouse@example.com",
+      "role": "ROLE_USER"
+    },
+    {
+      "id": 2,
+      "name": "SpongeBob SquarePants",
+      "email": "spongebob.squarepants@example.com",
+      "role": "ROLE_USER"
+    },
+    {
+      "id": 3,
+      "name": "Bugs Bunny",
+      "email": "bugs.bunny@example.com",
+      "role": "ROLE_ADMIN"
+    },
+    {
+      "id": 4,
+      "name": "Daffy Duck",
+      "email": "daffy.duck@example.com",
+      "role": "ROLE_ADMIN"
+    },
+    {
+      "id": 5,
+      "name": "Tom Cat",
+      "email": "tom.cat@example.com",
+      "role": "ROLE_USER"
+    },
+    {
+      "id": 6,
+      "name": "Popeye",
+      "email": "popeye@example.com",
+      "role": "ROLE_ADMIN"
+    },
+    {
+      "id": 7,
+      "name": "Scooby-Doo",
+      "email": "scooby.doo@example.com",
+      "role": "ROLE_USER"
+    },
+    {
+      "id": 8,
+      "name": "Courage the Cowardly Dog",
+      "email": "courage@example.com",
+      "role": "ROLE_USER"
+    },
+    {
+      "id": 9,
+      "name": "Johnny Bravo",
+      "email": "johnny.bravo@example.com",
+      "role": "ROLE_USER"
+    },
+    {
+      "id": 10,
+      "name": "Duck Dodgers",
+      "email": "duck.dodgers@example.com",
+      "role": "ROLE_ADMIN"
+    }
+  ]
+}
