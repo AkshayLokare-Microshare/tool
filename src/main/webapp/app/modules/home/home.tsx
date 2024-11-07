@@ -4,6 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
 import { Row, Col, Alert } from 'reactstrap';
+import Sidebar from '../Sidebar';
 
 import { useAppSelector } from 'app/config/store';
 
@@ -12,6 +13,7 @@ export const Home = () => {
 
   return (
     <Row>
+      <Sidebar />
       <Col md="3" className="pad">
         <span className="hipster rounded" />
       </Col>

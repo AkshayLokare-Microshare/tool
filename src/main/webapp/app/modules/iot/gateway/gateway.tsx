@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { toast, Slide } from 'react-toastify';
+
 import Screen from './Screen';
+import Sidebar from 'app/modules/Sidebar';
 import './gatewayStyles.css';
 
 function Gateways() {
@@ -36,7 +38,7 @@ function Gateways() {
   }, [page]);
 
   // Open email modal with the selected gateway
-  const handleOpenModal = (gateway) => {
+  const handleOpenModal = gateway => {
     setSelectedGateway(gateway);
     setModalOpen(true);
   };
@@ -52,7 +54,9 @@ function Gateways() {
     if (!selectedGateway) return;
 
     const subject = emailSubject || `Disconnected Gateway - ${selectedGateway.deveui}`;
-    const body = emailBody || `The following gateway is disconnected. Please check!\n\nGateway Dev Eui: ${selectedGateway.deveui}\nLocation: ${selectedGateway.locs}`;
+    const body =
+      emailBody ||
+      `The following gateway is disconnected. Please check!\n\nGateway Dev Eui: ${selectedGateway.deveui}\nLocation: ${selectedGateway.locs}`;
 
     try {
       const response = await fetch('http://localhost:5000/send-email', {
@@ -64,17 +68,17 @@ function Gateways() {
       if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
       toast.success(`Email sent successfully to ${recipientEmails.join(', ')}`, {
-        position: "top-right",
+        position: 'top-right',
         autoClose: 2000,
-        theme: "light",
+        theme: 'light',
         transition: Slide,
       });
     } catch (err) {
       console.error('Error sending email:', err);
       toast.error('Failed to send the email. Check console logs!', {
-        position: "top-right",
+        position: 'top-right',
         autoClose: 2000,
-        theme: "light",
+        theme: 'light',
         transition: Slide,
       });
     } finally {
@@ -83,12 +87,15 @@ function Gateways() {
   };
 
   // Filter gateways based on search and filter criteria
-  const filteredGateways = gateways.filter((gateway) => {
+  const filteredGateways = gateways.filter(gateway => {
     const matchedSearch = searchFilter
       ? gateway[searchFilter.toLowerCase()] && // Check if the value is not null
         gateway[searchFilter.toLowerCase()].toString().toLowerCase().includes(search.toLowerCase())
-      : Object.values(gateway).some((value) => value && // Check if the value is not null
-        value.toString().toLowerCase().includes(search.toLowerCase()));
+      : Object.values(gateway).some(
+          value =>
+            value && // Check if the value is not null
+            value.toString().toLowerCase().includes(search.toLowerCase()),
+        );
     if (filter === 'All') return matchedSearch;
     if (filter === 'Connected') return gateway.connection_status && matchedSearch;
     if (filter === 'Disconnected') return !gateway.connection_status && matchedSearch;
@@ -99,22 +106,18 @@ function Gateways() {
 
   return (
     <div className="gateway-container">
+      <Sidebar />
       <h2 className="gateway-title">List of All Gateways</h2>
 
       {/* Filter and Search UI */}
       <div className="filter-search">
-        <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+        <select value={filter} onChange={e => setFilter(e.target.value)}>
           <option value="All">All</option>
           <option value="Connected">Connected</option>
           <option value="Disconnected">Disconnected</option>
         </select>
-        <input
-          type="text"
-          placeholder="Search..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <select value={searchFilter} onChange={(e) => setSearchFilter(e.target.value)}>
+        <input type="text" placeholder="Search..." value={search} onChange={e => setSearch(e.target.value)} />
+        <select value={searchFilter} onChange={e => setSearchFilter(e.target.value)}>
           <option value="">All Fields</option>
           <option value="deveui">Dev Eui</option>
           <option value="id">ID</option>
@@ -132,7 +135,9 @@ function Gateways() {
           filteredGateways.map((gateway, index) => (
             <div key={index} className={`gateway-item ${gateway.connection_status ? 'connected' : 'disconnected'}`}>
               <div className="gateway-info">
-                <p>{gateway.id} | {gateway.deveui} | {gateway.fleet} | {gateway.locs}</p>
+                <p>
+                  {gateway.id} | {gateway.deveui} | {gateway.fleet} | {gateway.locs}
+                </p>
               </div>
               {!gateway.connection_status && (
                 <button className="gateway-btn" onClick={() => handleOpenModal(gateway)}>
@@ -148,17 +153,19 @@ function Gateways() {
 
       {/* Pagination Controls */}
       <div className="pagination-controls">
-        <button onClick={() => setPage((prev) => Math.max(prev - 1, 1))} disabled={page === 1}>
+        <button onClick={() => setPage(prev => Math.max(prev - 1, 1))} disabled={page === 1}>
           Previous
         </button>
-        <span>{page} of {totalPages}</span>
-        <button onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))} disabled={page === totalPages}>
+        <span>
+          {page} of {totalPages}
+        </span>
+        <button onClick={() => setPage(prev => Math.min(prev + 1, totalPages))} disabled={page === totalPages}>
           Next
         </button>
       </div>
 
       {/* Email Modal */}
-      {isModalOpen && selectedGateway && (
+      {isModalOpen && (
         <Screen
           gateway={selectedGateway}
           recipient={selectedGateway.email1}

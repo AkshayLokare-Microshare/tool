@@ -24,16 +24,16 @@ export const Brand = () => (
 
 export const Home = () => (
   <NavItem>
-    <NavLink tag={Link} to="/iot/gateway" className="d-flex align-items-center">
+    {/* <NavLink tag={Link} to="/iot/gateway" className="d-flex align-items-center">
       <FontAwesomeIcon icon={faNetworkWired} />
       <span>Gateways</span>
-    </NavLink>
+    </NavLink> */}
 
-    {/* <NavLink tag={Link} to="/" className="d-flex align-items-center">
+    <NavLink tag={Link} to="/" className="d-flex align-items-center">
       <FontAwesomeIcon icon="home" />
       <span>
         <Translate contentKey="global.menu.home">Home</Translate>
       </span>
-    </NavLink> */}
+    </NavLink>
   </NavItem>
 );
