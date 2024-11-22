@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNetworkWired, faHome, faTools } from '@fortawesome/free-solid-svg-icons';
+
+import './Sidebar.css';
 
 const Sidebar = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +21,6 @@ const Sidebar = () => {
         </button>
       )}
 
-      {/* Sidebar */}
       <div className={`sidebar ${isVisible ? 'visible' : 'hidden'}`}>
         <ul className="sidebar-links">
           {/* <NavLink tag={Link} to="/iot/gateway" className="d-flex align-items-center">
@@ -29,29 +29,29 @@ const Sidebar = () => {
     </NavLink> */}
           <li>
             <Link to="/">
-              <span>Home &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
               <FontAwesomeIcon icon={faHome} />
+              <span>Home</span>
             </Link>
           </li>
 
           <li>
             <Link to="/iot/gateway">
-              <span>Gateways &nbsp; &nbsp;&nbsp;</span>
               <FontAwesomeIcon icon={faNetworkWired} />
+              <span>Gateways</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/iot/iottest">
+              <FontAwesomeIcon icon={faTools} />
+              <span>Test</span>
             </Link>
           </li>
 
           <li>
             <Link to="/">
-              <span>Coming Soon... &nbsp; &nbsp;&nbsp;</span>
               <FontAwesomeIcon icon={faTools} />
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/">
-              <span>Coming Soon... &nbsp; &nbsp;&nbsp;</span>
-              <FontAwesomeIcon icon={faTools} />
+              <span>Coming Soon...</span>
             </Link>
           </li>
         </ul>

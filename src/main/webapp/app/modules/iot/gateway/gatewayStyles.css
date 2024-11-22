@@ -1,92 +1,126 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
-  height: 100vh; /* Full height */
+/* Modal Overlay */
+.screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-/* Main Component */
-.main-container {
-  flex-grow: 1; /* Allow to fill available space */
-  display: flex;
-  flex-direction: column;
-  padding: 20px; /* Inner padding */
+/* Modal Container */
+.screen {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  text-align: center;
 }
 
-/* Gateway Title */
-.gateway-title {
-  font-size: 28px;
-  font-weight: bold;
+/* Modal Heading */
+.screen h2 {
   margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
 }
 
-/* Filter and Search UI */
-.filter-search {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.filter-search select,
-.filter-search input {
+/* Input and Textarea Styles */
+.screen-input,
+.screen-textarea {
+  width: 100%;
   padding: 10px;
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-right: 10px;
-  width: 30%;
+  font-size: 16px;
 }
 
-.filter-search input {
-  flex-grow: 1;
+.screen-textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Actions in Modal */
+.screen-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-cancel,
+.btn-ok {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #f44336;
+  color: white;
+}
+
+.btn-ok {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-ok:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 
 /* Gateway List */
 .gateway-list {
-  flex-grow: 1; /* Allow to fill available space */
-  overflow-y: auto; /* Enable scrolling if content overflows */
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .gateway-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1.2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px; /* Increased padding for better touch targets */
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  transition: background-color 0.3s;
 }
 
 .gateway-item.connected {
-  background-color: #dff0d8;
+  border-color: #4caf50;
 }
 
 .gateway-item.disconnected {
-  background-color: #f2dede;
+  border-color: #f44336;
 }
 
-.gateway-info {
-  flex-grow: 1;
+/* Gateway Info */
+.gateway-info p {
+  margin: 0;
+  font-size: 16px;
 }
 
 /* Gateway Button */
 .gateway-btn {
-  background-color: #007bff;
+  padding: 8px 12px;
+  background-color: crimson;
   color: white;
   border: none;
   border-radius: 4px;
-  padding: 10px 15px;
+  font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .gateway-btn:hover {
-  background-color: #0056b3;
+  background-color: rgb(215, 15, 55);
 }
 
 /* Pagination Controls */
@@ -96,109 +130,32 @@ body {
   margin-top: 20px;
 }
 
-/* Additional Buttons Container */
-.additional-buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px; /* Spacing above the buttons */
-}
-
-/* Email popup */
-.screen-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Darker semi-transparent background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000; /* Ensures the screen is on top */
-}
-
-.screen {
-  background: white;
-  padding: 30px; /* Increased padding for better spacing */
-  border-radius: 12px; /* More rounded corners for a modern look */
-  width: 500px; /* Increased width for better readability */
-  max-width: 90%; /* Ensures responsiveness */
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for elegance */
-  overflow: hidden; /* Ensures content doesn’t overflow */
-  font-family: Arial, sans-serif; /* Consistent font for readability */
-}
-
-.screen h2 {
-  margin-top: 0;
-  font-size: 1.75em; /* Larger heading for emphasis */
-  color: #333; /* Darker color for better readability */
-  text-align: center;
-  text-decoration: underline;
-}
-
-.screen p {
-  margin: 8px 0; /* Add space between paragraphs */
-  line-height: 1.6; /* Improve readability */
-  color: #252222; /* Slightly lighter color for the text */
-}
-
-.screen label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold; /* Make labels stand out */
-  color: #333; /* Consistent text color */
-  margin-top: 20px;
-}
-
-.screen-input,
-.screen-textarea {
-  width: 100%;
-  padding: 10px; /* Increased padding for better usability */
-  margin-top: 4px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box; /* Ensure padding is included in width */
-}
-
-.screen-textarea {
-  height: 120px; /* Set a fixed height for the textarea */
-  resize: vertical; /* Allow vertical resizing */
-}
-
-.screen-actions {
-  display: flex;
-  justify-content: space-between; /* Space buttons to opposite corners */
-  margin-top: 20px;
-}
-
-.btn-ok,
-.btn-cancel {
-  padding: 8px 15px; /* Reduced padding for smaller buttons */
+.pagination-controls button {
+  padding: 8px 12px;
+  background: #2196f3;
+  color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 1em; /* Adjust font size for buttons */
-  font-weight: bold; /* Make button text bold */
-  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
 }
 
-.btn-ok {
-  background-color: #4caf50; /* Green color */
-  color: white;
+.pagination-controls button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 
-.btn-cancel {
-  background-color: #f44336; /* Red color */
-  color: white;
+/* Filter and Search */
+.filter-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.btn-ok:hover,
-.btn-cancel:hover {
-  opacity: 0.9; /* Slightly reduce opacity on hover for visual feedback */
-  transform: scale(1.05); /* Slightly enlarge on hover for a button effect */
-}
-
-.btn-ok:focus,
-.btn-cancel:focus {
-  outline: 2px solid #333; /* Add a focus outline for accessibility */
+.filter-search select,
+.filter-search input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
 }
